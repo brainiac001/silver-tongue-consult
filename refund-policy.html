@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - Silver Tongue Consult</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #052342 0%, #083565ad 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }   
+
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-grow:hover {
+            transform: scale(1.02);
+        }
+
+        .button-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .button-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo-text {
+            background: linear-gradient(to right, #EBCF89, #C09237);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #EBCF89;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-[100vw] z-50 bg-[#052342]/95 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <div class="flex items-center space-x-2">
+                        <img class="h-[60px]" src="img/favicon.png">
+                        <div>
+                            <p class="text-2xl font-bold logo-text">Silver Tongue      </p>
+    
+                            <p class="text-white text-sm mt-[-5px]">Consult</p>
+                        </div>
+                    
+                        
+                    </div>
+                </a>
+               
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-[#EBCF89] transition-colors">Home</a>
+                    <a href="index.html#about" class="nav-link text-white hover:text-[#EBCF89] transition-colors">About</a>
+                    <a href="index.html#event-details" class="nav-link text-white hover:text-[#EBCF89] transition-colors">Event Details</a>
+                    <a href="index.html#contact" class="nav-link text-white hover:text-[#EBCF89] transition-colors">Contact</a>
+                </div>
+                <a href="#registration">
+                    <button class="button-hover bg-[#EBCF89] hover:bg-[#C09237] text-[#052342] hover:text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-300">
+                        Get Started
+                    </button>
+                </a>
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="hero-gradient pt-32 pb-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Refund Policy</h1>
+                <p class="text-[#EBCF89] text-xl">Understanding Our Payment Terms</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Main Content -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 space-y-8" data-aos="fade-up">
+                        <!-- Last Updated -->
+                        <div class="text-center mb-8">
+                            <p class="text-[#C09237] font-semibold">Last Updated: March 2024</p>
+                        </div>
+    
+                        <!-- General Policy -->
+                        <div class="hover-grow">
+                            <h2 class="text-2xl font-semibold text-[#052342] mb-4">General Policy</h2>
+                            <div class="bg-[#F0F4F8] p-6 rounded-lg">
+                                <p class="text-gray-600 leading-relaxed">
+                                    At Silver Tongue Consult, we maintain a strict no-refund policy. All payments made for our services, including but not limited to coaching sessions, workshops, and training programs, are non-refundable once processed.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <!-- Why We Have This Policy -->
+                        <div class="hover-grow">
+                            <h2 class="text-2xl font-semibold text-[#052342] mb-4">Why We Have This Policy</h2>
+                            <div class="bg-[#F0F4F8] p-6 rounded-lg">
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>We reserve and commit resources specifically for your scheduled sessions</li>
+                                    <li>Our services are time-based and cannot be resold once scheduled</li>
+                                    <li>We invest in preparation time for each client's specific needs</li>
+                                    <li>This policy helps us maintain the quality and reliability of our services</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <!-- Exceptions -->
+                        <div class="hover-grow">
+                            <h2 class="text-2xl font-semibold text-[#052342] mb-4">Exceptions to Our Policy</h2>
+                            <div class="bg-[#F0F4F8] p-6 rounded-lg">
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Refunds may only be considered in the following exceptional circumstances:
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Proven cases of fraudulent transactions</li>
+                                    <li>Legal requirements by relevant authorities</li>
+                                    <li>Technical errors resulting in duplicate charges</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <!-- Before Making a Payment -->
+                        <div class="hover-grow">
+                            <h2 class="text-2xl font-semibold text-[#052342] mb-4">Before Making a Payment</h2>
+                            <div class="bg-[#F0F4F8] p-6 rounded-lg">
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    We encourage all clients to:
+                                </p>
+                                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                    <li>Carefully review our services and programs before purchase</li>
+                                    <li>Ask any questions about our services beforehand</li>
+                                    <li>Ensure you understand the commitment required</li>
+                                    <li>Verify the payment amount before confirming the transaction</li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <!-- Rescheduling -->
+                        <div class="hover-grow">
+                            <h2 class="text-2xl font-semibold text-[#052342] mb-4">Rescheduling Policy</h2>
+                            <div class="bg-[#F0F4F8] p-6 rounded-lg">
+                                <p class="text-gray-600 leading-relaxed">
+                                    While we do not offer refunds, we understand that circumstances may arise that require rescheduling. Please contact us at least 48 hours before your scheduled session to discuss rescheduling options. Rescheduling is subject to availability and our discretion.
+                                </p>
+                            </div>
+                        </div>
+    
+                        <!-- Contact Information -->
+                        <div class="hover-grow">
+                            <h2 class="text-2xl font-semibold text-[#052342] mb-4">Questions About Our Policy</h2>
+                            <div class="bg-[#F0F4F8] p-6 rounded-lg">
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    If you have any questions about our refund policy, please contact us at:
+                                </p>
+                                <div class="space-y-2">
+                                    <p class="text-gray-600">
+                                        <span class="font-semibold">Email:</span> 
+                                        <a href="mailto:silvertongue.theelocutionist@gmail.com" class="text-[#C09237] hover:underline">
+                                            silvertongue.theelocutionist@gmail.com
+                                        </a>
+                                    </p>
+                                    <p class="text-gray-600">
+                                        <span class="font-semibold">Phone:</span> 
+                                        <a href="tel:08135350203" class="text-[#C09237] hover:underline">
+                                            08135350203
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Update Notice -->
+                    <div class="mt-8 text-center text-sm text-gray-600" data-aos="fade-up">
+                        <p>We reserve the right to update this Refund Policy at any time. Changes will be posted on this page with an updated revision date.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="bg-[#052342] text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm text-center">&copy; 2024 The Voice Repertoire. All rights reserved. Designed by <a href="https://idootech.com.ng" class="text-[#EBCF89] hover:text-[#ffffff]">IDOOTECH</a>.</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="privacy-policy.html" class="text-sm hover:text-[#EBCF89]">Privacy Policy</a>
+                        <a href="refund-policy.html" class="text-sm hover:text-[#EBCF89]">Refund Policy</a>
+                        <a href="https://wa.me/2348135350203" class="text-sm hover:text-[#EBCF89]">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        </script>
+    </body>
+    </html>

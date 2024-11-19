@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Tongue Consult</title>
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #052342 0%, #08356554 100%), url("img/hero_background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }   
+        
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hover-grow {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-grow:hover {
+            transform: scale(1.02);
+        }
+
+        .button-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .button-hover:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .logo-text {
+            background: linear-gradient(to right, #EBCF89, #C09237);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #EBCF89;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-[100vw] z-50 bg-[#052342]/95 backdrop-blur-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <div class="flex items-center space-x-2">
+                        <img class="h-[60px]" src="img/favicon.png">
+                        <div>
+                            <p class="text-2xl font-bold logo-text">Silver Tongue      </p>
+    
+                            <p class="text-white text-sm mt-[-5px]">Consult</p>
+                        </div>
+                    
+                        
+                    </div>
+                </a>
+               
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-white hover:text-[#EBCF89] transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-[#EBCF89] transition-colors">About</a>
+                    <a href="#event-details" class="nav-link text-white hover:text-[#EBCF89] transition-colors">Event Details</a>
+                    <a href="#contact" class="nav-link text-white hover:text-[#EBCF89] transition-colors">Contact</a>
+                </div>
+                <a href="#registration">
+                    <button class="button-hover bg-[#EBCF89] hover:bg-[#C09237] text-[#052342] hover:text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-300">
+                        Get Started
+                    </button>
+                </a>
+               
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen relative text-white overflow-hidden flex items-center justify-center ">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute w-96 h-96 rounded-full bg-[#EBCF89] blur-3xl -top-20 -left-20"></div>
+            <div class="absolute w-96 h-96 rounded-full bg-[#EC3837] blur-3xl -bottom-20 -right-20"></div>
+        </div>
+
+        <div class="container mx-auto px-4 pb-16 relative z-10">
+            <div class="text-center max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="mb-8">
+                    <h1 class="text-6xl md:text-7xl font-bold mb-4 logo-text">Silver Tongue</h1>
+                    <p class="text-2xl text-[#EBCF89] font-semibold">Voice & Communication Excellence</p>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    Unlock Your Voice's Full Potential
+                </h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                    Where Excellence Meets Expression
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="button-hover bg-[#EBCF89] hover:bg-[#C09237] text-[#052342] hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors duration-300">
+                        Enroll Now
+                    </button>
+                    <button class="button-hover border-2 border-[#EBCF89] text-[#EBCF89] hover:bg-[#EBCF89] hover:text-[#052342] px-8 py-3 rounded-full text-lg font-semibold transition-colors duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2">
+                <svg class="w-8 h-8 text-[#EBCF89] bounce " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Meet the Tutor Section -->
+    <section class="py-20 bg-white" id="about">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-[#C09237] text-lg font-semibold mb-2 block">About</span>
+                    <h2 class="text-4xl font-bold text-[#052342]">Meet the Expert</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Image container -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl hover-grow" data-aos="fade-right">
+                        <img src="img/silver_tongue_tutor.jpg" alt="Voice Coach" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Content container -->
+                    <div class="space-y-6">
+                        <div data-aos="fade-left" data-aos-delay="200">
+                            <h3 class="text-2xl font-semibold mb-4 text-[#052342]">
+                                Expert in Vocal Excellence
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                As a Phonetician, Phonologist, Elocutionist, and Voice Coach at Silver Tongue Consult, I specialize in the intricate art of spoken communication. My expertise lies in analyzing and refining the nuances of speech sounds, ensuring clarity, precision, and expressive delivery.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-left" data-aos-delay="400">
+                            <h3 class="text-2xl font-semibold mb-4 text-[#052342]">
+                                The Art of Elocution
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed mb-6">
+                                As an Elocutionist, I focus on the art of clear and expressive speech, emphasizing proper articulation, intonation, and rhythm. My coaching aims to enhance communication effectiveness, whether in public speaking, broadcasting, or theatrical performances.
+                            </p>
+                        </div>
+
+                        <div data-aos="fade-left" data-aos-delay="600">
+                            <h3 class="text-2xl font-semibold mb-4 text-[#052342]">
+                                Voice Coaching Philosophy
+                            </h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                In my role as a Voice Coach, I combine technical expertise with a deep understanding of vocal dynamics and performance. I guide individuals in cultivating vocal strength, flexibility, and endurance, tailored to their professional and personal needs.
+                            </p>
+                        </div>
+
+                        <a href="#program">
+                            <button class="mt-8 button-hover bg-[#052342] hover:bg-[#EBCF89] text-white hover:text-[#052342] px-8 py-3 rounded-full text-lg font-semibold transition-colors duration-300">
+                                Read More
+                            </button>
+                        </a>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Overview and Target Audience Section -->
+    <section class="py-20 bg-[#F8F8F8]" id="program">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-[#C09237] text-lg font-semibold mb-2 block">Our Program</span>
+                    <h2 class="text-4xl font-bold text-[#052342]">Unlock Your Voice's Full Potential</h2>
+                    <p class="text-xl text-gray-600 mt-4">Enhanced Vocal and Communication Skills</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- What you'll gain -->
+                    <div class="space-y-6" data-aos="fade-right">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#052342]">What you'll gain from the program</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>In-depth Understanding:</strong> Comprehensive knowledge of phonetics and phonology for clear communication.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Improved Pronunciation:</strong> Master pronunciation accuracy in various languages and dialects.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Enhanced Communication Skills:</strong> Become more articulate and confident in public speaking.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Voice Control and Modulation:</strong> Learn to convey emotions and emphasis effectively.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Career Advantages:</strong> Gain a competitive edge in teaching, broadcasting, acting, and public speaking.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Cultural and Linguistic Awareness:</strong> Deepen understanding of cultural diversity in language.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-[#C09237] mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Personal Development:</strong> Boost self-confidence and communicate effectively in various contexts.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Target Audience -->
+                    <div class="space-y-6" data-aos="fade-left">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#052342]">Who is this program for?</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Voice-Over Artists</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Presenters</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Educators</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Newscasters</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Public Speakers</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Journalists</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">OAPs</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Narrators</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Voice Actors</span>
+                            </div>
+
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Singers</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Customer Care Service</span>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-md hover-grow">
+                                <span class="text-[#C09237] font-semibold">Every Vocal Profession</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12" data-aos="fade-up">      
+                    <a href="#registration">
+                    <button class="button-hover bg-[#052342] hover:bg-[#EBCF89] text-white hover:text-[#052342] px-8 py-3 rounded-full text-lg font-semibold transition-colors duration-300">
+                        Enroll Now
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Event Details Section -->
+    <section class="py-20 bg-[#052342] text-white" id="event-details">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-[#EBCF89] text-lg font-semibold mb-2 block">Event Details</span>
+                    <h2 class="text-4xl font-bold text-white">THE VOICE REPERTOIRE</h2>
+                    <p class="text-xl text-[#EBCF89] mt-4">A 3 DAYS INTENSIVE MASTERCLASS</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Event Image -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl hover-grow" data-aos="fade-right">
+                        <img src="img/event_image.jpeg" alt="The Voice Repertoire Event" class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Event Details -->
+                    <div class="space-y-6" data-aos="fade-left">
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-[#EBCF89] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                <p class="text-lg"><strong>Date:</strong> December 5th - 7th</p>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-[#EBCF89] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <p class="text-lg"><strong>Time:</strong> 10am to 3pm</p>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-[#EBCF89] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                <p class="text-lg"><strong>Price:</strong> ₦10,000</p>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-[#EBCF89] mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <p class="text-lg"><strong>Location:</strong> Peace Realm Hall, Satellite Town, Lagos</p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-300 leading-relaxed">
+                            Join us for an intensive 3-day masterclass designed to unlock your voice's full potential. This event is perfect for voice-over artists, presenters, educators, and anyone looking to enhance their vocal and communication skills.
+                        </p>
+
+
+                        <a href="#registration">
+                        <button class="mt-8 button-hover bg-[#EBCF89] hover:bg-[#C09237] text-[#052342] hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors duration-300">
+                            Register Now
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="py-20 bg-gradient-to-br from-[#F0F4F8] to-white relative overflow-hidden" id="registration">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <svg class="absolute top-0 left-0 transform -translate-x-1/2 -translate-y-1/2 text-[#C09237] opacity-10" width="800" height="800" fill="none" viewBox="0 0 800 800">
+                <circle cx="400" cy="400" r="200" stroke="currentColor" stroke-width="100" />
+            </svg>
+            <svg class="absolute bottom-0 right-0 transform translate-x-1/3 translate-y-1/3 text-[#052342] opacity-10" width="600" height="600" fill="none" viewBox="0 0 600 600">
+                <path d="M300 0L565.685 300L300 600L34.3145 300L300 0Z" stroke="currentColor" stroke-width="80" />
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-down">
+                    <h2 class="text-4xl md:text-5xl font-bold text-[#052342] mb-4">Join The Voice Repertoire</h2>
+                    <p class="text-xl text-[#C09237]">Unlock Your Vocal Potential in Our 3-Day Intensive Masterclass</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl" data-aos="zoom-in">
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fullName" class="block text-sm font-medium text-[#052342] mb-2">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#F0F4F8] border border-[#C09237] text-[#052342] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C09237] transition duration-300">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-[#052342] mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#F0F4F8] border border-[#C09237] text-[#052342] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C09237] transition duration-300">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-[#052342] mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#F0F4F8] border border-[#C09237] text-[#052342] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C09237] transition duration-300">
+                            </div>
+                            <div>
+                                <label for="occupation" class="block text-sm font-medium text-[#052342] mb-2">Occupation</label>
+                                <select id="occupation" name="occupation" required
+                                    class="w-full px-4 py-3 rounded-lg bg-[#F0F4F8] border border-[#C09237] text-[#052342] focus:outline-none focus:ring-2 focus:ring-[#C09237] transition duration-300">
+                                    <option value="">Select your occupation</option>
+                                    <option value="Voice-Over Artist">Voice-Over Artist</option>
+                                    <option value="Presenter">Presenter</option>
+                                    <option value="Educator">Educator</option>
+                                    <option value="Newscaster">Newscaster</option>
+                                    <option value="Public Speaker">Public Speaker</option>
+                                    <option value="Journalist">Journalist</option>
+                                    <option value="OAP">OAP</option>
+                                    <option value="Narrator">Narrator</option>
+                                    <option value="Voice Actor">Voice Actor</option>
+                                    <option value="Singer">Singer</option>
+                                    <option value="Customer Care Service">Customer Care Service</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="expectations" class="block text-sm font-medium text-[#052342] mb-2">Your Expectations</label>
+                            <textarea id="expectations" name="expectations" rows="4" required
+                                class="w-full px-4 py-3 rounded-lg bg-[#F0F4F8] border border-[#C09237] text-[#052342] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C09237] transition duration-300"></textarea>
+                        </div>
+
+                        <div class="flex items-center justify-between flex-wrap gap-4">
+                            <div class="text-[#052342]">
+                                <p class="font-semibold">Registration Fee:</p>
+                                <p class="text-2xl font-bold">₦10,000</p>
+                            </div>
+                            <button type="submit" class="bg-[#052342] hover:bg-[#C09237] text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#C09237] focus:ring-opacity-50">
+                                Register Now
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="mt-8 text-center text-sm text-[#052342]" data-aos="fade-up">
+                    <p>By submitting this form, you agree to complete your registration by paying the required fee. Payment has to be made after form submission to complete your registration. Refund policy can be found <a href="refund-policy.html" class="text-[#C09237] hover:text-[#EBCF89] transition-colors">here</a>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-[#F0F4F8]" id="testimonials">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-[#052342] mb-4">What Our Participants Say</h2>
+                <p class="text-xl text-[#C09237]">Hear from those who have experienced The Voice Repertoire</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative" x-data="slider">
+                    <div class="overflow-hidden">
+                        <div class="flex transition-transform duration-500" :style="`transform: translateX(-${activeSlide * 100}%)`">
+                            <!-- Testimonial 1 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white rounded-lg shadow-lg p-8">
+                                    <div class="flex items-center mb-6">
+                                        <img src="./img/tes1.jpg" alt="Oghobase Raphael" class="w-16 h-16 rounded-full mr-4">
+                                        <h3 class="text-xl font-semibold text-[#052342]">Oghobase Raphael</h3>
+                                    </div>
+                                    <p class="text-gray-600 italic">"I used to think that learning phonics was a daunting task, but everything changed when I met a friend and colleague who broke it down into easy, digestible steps. Thanks to this guidance, my reading and speaking skills have transformed completely! I wholeheartedly recommend this training—join in, invite others, and I promise you won't be disappointed!"</p>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 2 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white rounded-lg shadow-lg p-8">
+                                    <div class="flex items-center mb-6">
+                                        <img src="./img/tes2.jpeg" alt="Afakereta Racheal" class="w-16 h-16 rounded-full mr-4">
+                                        <h3 class="text-xl font-semibold text-[#052342]">Afakereta Racheal</h3>
+                                    </div>
+                                    <p class="text-gray-600 italic">"My name is Mrs. Afakereta Racheal, a Phonics Instructor and Coach dedicated to empowering individuals and schools through the art of phonics. Working with Mr. Joseph, whom I fondly call my 'BOSS', has been a game-changer. He has a unique way of highlighting essential skills that truly set me apart in my field. His flawless articulation and powerful diction captured my attention from the start, and meeting him marked a turning point in my career. His services are simply exceptional—10 out of 10!"</p>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial 3 -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white rounded-lg shadow-lg p-8">
+                                    <div class="flex items-center mb-6">
+                                        <img src="./img/tes3.jpeg" alt="Rita" class="w-16 h-16 rounded-full mr-4">
+                                        <h3 class="text-xl font-semibold text-[#052342]">Rita</h3>
+                                    </div>
+                                    <p class="text-gray-600 italic">"If you're looking to excel in voiceover, I highly recommend Mr. Silver Tongue. His teaching style is unmatched—he takes complex theories and translates them into clear, actionable steps. His feedback is both encouraging and constructive, and he genuinely celebrates his students' progress. This has been the most impactful online training I've experienced!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <button @click="previousSlide" class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-2 shadow-md hover:bg-[#F0F4F8] focus:outline-none">
+                        <svg class="w-6 h-6 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button @click="nextSlide" class="absolute top-1/2 right-0 -translate-y-1/2 translate-x-4 bg-white rounded-full p-2 shadow-md hover:bg-[#F0F4F8] focus:outline-none">
+                        <svg class="w-6 h-6 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+
+                    <!-- Dots Indicator -->
+                    <div class="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-3">
+                        <template x-for="(slide, index) in slides" :key="index">
+                            <button @click="activeSlide = index" 
+                                    class="w-3 h-3 rounded-full transition-colors duration-200"
+                                    :class="activeSlide === index ? 'bg-[#052342]' : 'bg-gray-300'">
+                            </button>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Contact and Location Section -->
+<section class="pt-20 bg-gradient-to-b from-white to-[#F0F4F8]" id="contact">
+    <!-- Contact Information -->
+    <div class="container mx-auto px-4 mb-20">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-[#C09237] text-lg font-semibold mb-2 block">Get in Touch</span>
+                <h2 class="text-4xl font-bold text-[#052342] mb-4">Contact Information</h2>
+                <p class="text-gray-600">Reach out to us through any of these channels</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+                <!-- Address Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#052342]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#052342] mb-4">Office Address</h3>
+                        <p class="text-gray-600">5 Folarin Street, Ijegun Egba, Satellite Town Lagos.</p>
+                    </div>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#052342]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#052342] mb-4">Email</h3>
+                        <a href="mailto:silvertongue.theelocutionist@gmail.com" class="text-gray-600 hover:text-[#C09237] transition-colors">
+                            silvertongue.theelocutionist@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-[#052342]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-[#052342] mb-4">Phone</h3>
+                        <a href="tel:08135350203" class="text-gray-600 hover:text-[#C09237] transition-colors">
+                            08135350203
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="mt-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl font-semibold text-[#052342] mb-6">Connect With Us</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.tiktok.com/@the_silver.tongue" target="_blank" 
+                       class="w-12 h-12 bg-[#052342] text-white rounded-full flex items-center justify-center hover:bg-[#C09237] transition-colors">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/the_silver._tongue/" target="_blank"
+                       class="w-12 h-12 bg-[#052342] text-white rounded-full flex items-center justify-center hover:bg-[#C09237] transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://web.facebook.com/profile.php?id=100083584354219" target="_blank"
+                       class="w-12 h-12 bg-[#052342] text-white rounded-full flex items-center justify-center hover:bg-[#C09237] transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Location Section -->
+<div class="relative">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0">
+        <img src="img/lagos_aerial_view.jpg" alt="Lagos Aerial View" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-[#052342]/70"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16" data-aos="fade-up">
+                    <span class="text-[#EBCF89] text-lg font-semibold mb-2 block">Find Us</span>
+                    <h2 class="text-4xl font-bold text-white mb-4">Event Location</h2>
+                    <p class="text-[#EBCF89] text-xl">Peace Realm Hall, Satellite Town, Lagos</p>
+                </div>
+
+                <!-- Map -->
+                <div class="rounded-2xl overflow-hidden shadow-2xl mb-12" data-aos="zoom-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d126866.69539791346!2d3.1860796542137346!3d6.447391588322181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x103b89e0ccaeabc1%3A0xfad53d2ae9fd2f6e!2sClose%2016%20bridge%2C%20St.%20John's%20Cresent%2C%20Satellite%20Town%2C%20Lagos!3m2!1d6.4474255!2d3.2684360999999997!5e0!3m2!1sen!2sng!4v1730073228215!5m2!1sen!2sng" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <!-- Directions -->
+                <div class="grid md:grid-cols-2 gap-8 text-white" data-aos="fade-up">
+                    <div class="bg-[#052342]/80 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:bg-[#052342]/90 transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-[#EBCF89] rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-[#EBCF89]">From the Island</h3>
+                        </div>
+                        <p class="text-gray-200 leading-relaxed">
+                            Head towards Mile 2. After passing Mile 2, get off at Alakija. From there, take a bike to Satellite Town, and tell the rider to take you to Close 16 Bridge, near Saint John Anglican Church at Peace Realm Hall.
+                        </p>
+                    </div>
+
+                    <div class="bg-[#052342]/80 backdrop-blur-lg p-8 rounded-2xl border border-white/10 hover:bg-[#052342]/90 transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-[#EBCF89] rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-[#052342]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-[#EBCF89]">From Ogun State Axis</h3>
+                        </div>
+                        <p class="text-gray-200 leading-relaxed">
+                            Use Iyana-Iba or Trade Fair Under Bridge as your landmark. From any of these stops, take a bus to Alakija. Then, board a bike to Satellite Town and ask the rider for Close 16 Bridge, near Saint John Anglican Church at Peace Realm Hall.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with separator -->
+    <div class="relative">
+        <!-- Separator Line -->
+        <hr class="border-t border-white/20 mx-auto max-w-7xl">
+
+        <!-- Footer Content -->
+        <footer class="bg-[#052342] text-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <p class="text-sm text-center">&copy; 2024 The Voice Repertoire. All rights reserved. Designed by <a href="https://idootech.com.ng" class="text-[#EBCF89] hover:text-[#ffffff]">IDOOTECH</a>.</p>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="privacy-policy.html" class="text-sm hover:text-[#EBCF89]">Privacy Policy</a>
+                        <a href="refund-policy.html" class="text-sm hover:text-[#EBCF89]">Refund Policy</a>
+                        <a href="https://wa.me/2348135350203" class="text-sm hover:text-[#EBCF89]">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+</section>
+
+
+
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('slider', () => ({
+                activeSlide: 0,
+                slides: [0, 1, 2],
+                autoplayInterval: null,
+
+                init() {
+                    // Start autoplay
+                    this.startAutoplay();
+                },
+
+                startAutoplay() {
+                    this.autoplayInterval = setInterval(() => {
+                        this.nextSlide();
+                    }, 5000);
+                },
+
+                stopAutoplay() {
+                    if (this.autoplayInterval) {
+                        clearInterval(this.autoplayInterval);
+                    }
+                },
+
+                nextSlide() {
+                    this.activeSlide = (this.activeSlide + 1) % this.slides.length;
+                },
+
+                previousSlide() {
+                    this.activeSlide = (this.activeSlide - 1 + this.slides.length) % this.slides.length;
+                }
+            }))
+        })
+    </script>
+</body>
+</html>
